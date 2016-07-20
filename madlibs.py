@@ -53,11 +53,14 @@ def show_madlib_form():
 @app.route('/madlib')
 def show_madlib():
 
+    exclamations = request.args.getlist("exclamation")
+
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
     verb = request.args.get("verb")
 
     return render_template("madlib.html", 
+                            exclamations=exclamations,
                             noun=noun,
                             adjective=adjective,
                             verb=verb)
