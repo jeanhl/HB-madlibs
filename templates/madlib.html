@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block css %}<link rel="stylesheet" href="/static/madlibs.css">{% endblock %}
+
+{% block title %}This is your story!{% endblock %}
+
+{% block content %}
+
+<h1>"{% for exclamation in exclamations %}Oh my {{exclamation}}!
+
+    {% endfor %}</h1>
+
+<p>It's a very {{adjective}} {{noun}} {{verb}} down the street!"</p>
+
+{% endblock %}

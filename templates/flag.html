@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block css %}<link rel="stylesheet" href="/static/madlibs.css">{% endblock %}
+
+{% block title %}This is your flag!{% endblock %}
+
+{% block content %}
+
+<h1>"{% for exclamation in exclamations %}Oh my {{exclamation}}!
+
+    {% endfor %}</h1>
+
+{% endblock %}

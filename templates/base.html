@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+    <link rel="stylesheet" href="/static/base.css">
+    {% block css %}OPTIONAL CSS GOES HERE{% endblock %}
+</head>
+<body>
+
+{% block content %}
+
+BODY CONTENT GOES HERE
+
+{% endblock %}
+
+<footer>This is a footer inhereted from base.html</footer>
+
+</body>
+</html>
