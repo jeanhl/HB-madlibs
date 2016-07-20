@@ -53,7 +53,7 @@ def show_madlib_form():
 @app.route('/madlib')
 def show_madlib():
 
-    madlibs = ["madlib1.html", "madlib2.html"]
+    #madlibs = ["madlib1.html", "madlib2.html"]
     exclamations = request.args.getlist("exclamation")
 
     noun = request.args.get("noun")
@@ -62,7 +62,7 @@ def show_madlib():
 
 
 
-    return render_template(choice(madlibs), 
+    return render_template("madlib.html", 
                             exclamations=exclamations,
                             noun=noun,
                             adjective=adjective,
