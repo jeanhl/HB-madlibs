@@ -50,17 +50,22 @@ def show_madlib_form():
         return render_template("game.html")
 
 
+@app.route('/flaglib')
+def show_madlib():
+
+    colors = request.args.getlist("color")
+
+    return render_template("flag.html", colors=colors)
+
+
 @app.route('/madlib')
 def show_madlib():
 
     #madlibs = ["madlib1.html", "madlib2.html"]
-    exclamations = request.args.getlist("exclamation")
 
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
     verb = request.args.get("verb")
-
-
 
     return render_template("madlib.html", 
                             exclamations=exclamations,
